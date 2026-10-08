@@ -1,0 +1,34 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {questions,roundQuestions,shuffled,badgeDefinitions} from '../lib/content/questions';
+import {freshProfile,recordAttempt,readProfile,streakFor,longestStreak,earnedBadges,firstAttempts} from '../lib/progress';
+test('all workbook content is mapped with valid answers and no detector cues',()=>{
+ assert.equal(questions.length,32);assert.equal(new Set(questions.map(q=>q.id)).size,32);
+ assert.deepEqual(['speed','ratio','fake'].map(m=>questions.filter(q=>q.mode===m).length),[10,6,16]);
+ assert.equal(questions.filter(q=>q.mode==='fake'&&q.answer==='fake').length,8);assert.equal(badgeDefinitions.length,8);
+ for(const q of questions){assert.equal(q.options.filter(o=>o.id===q.answer).length,1);assert.ok(q.prompt&&q.explanation);if(q.mode==='fake')assert.ok(!q.snippet?.includes('Allegedly'))}
+});
+test('rounds shuffle without losing content and prioritize unseen questions',()=>{
+ const ids=questions.filter(q=>q.mode==='speed').map(q=>q.id);const round=roundQuestions('speed',[ids[0]],()=>.4);assert.equal(round.at(-1)?.id,ids[0]);assert.equal(new Set(round.map(q=>q.id)).size,10);assert.deepEqual(shuffled([1,2,3],()=>0),[2,3,1]);
+});
+test('XP does not repeat, every attempt is counted, first accuracy is stable',()=>{
+ const q=questions[0];const a=recordAttempt(freshProfile,q,false,35,'2026-10-08');const b=recordAttempt(a.profile,q,true,5,'2026-10-08');assert.equal(b.xp,0);assert.equal(b.profile.attempts.length,2);assert.equal(firstAttempts(b.profile.attempts)[0].correct,false);assert.deepEqual(b.profile.days,['2026-10-08']);const c=recordAttempt(freshProfile,q,true,5,'2026-10-08');assert.equal(c.xp,155);
+});
+test('streaks handle gaps, yesterday, and month/year boundaries',()=>{
+ assert.equal(streakFor(['2025-12-31','2026-01-01'],'2026-01-02'),2);assert.equal(streakFor(['2025-12-31'],'2026-01-02'),0);assert.equal(streakFor(['2026-02-28','2026-03-01'],'2026-03-01'),2);assert.equal(longestStreak(['2026-10-01','2026-10-02','2026-10-04']),2);
+});
+test('badge thresholds include replays, fake-only verdicts and split domain tags',()=>{
+ let p={...freshProfile};const speed=questions[0],fake=questions.find(q=>q.mode==='fake'&&q.answer==='fake')!,real=questions.find(q=>q.mode==='fake'&&q.answer==='real')!;
+ for(let i=0;i<20;i++)p=recordAttempt(p,speed,true,20,'2026-10-08').profile;
+ assert.equal(earnedBadges(p)[0],true);assert.equal(earnedBadges(p)[5],true);assert.equal(earnedBadges(p)[6],true);
+ for(let i=0;i<10;i++)p=recordAttempt(p,real,true,5,'2026-10-08').profile;assert.equal(earnedBadges(p)[2],false);
+ for(let i=0;i<10;i++)p=recordAttempt(p,fake,true,5,'2026-10-08').profile;assert.equal(earnedBadges(p)[2],true);
+});
+test('Perfect Week requires activity and correctness on all seven days; awards persist',()=>{
+ let p={...freshProfile};for(let i=1;i<=7;i++)p=recordAttempt(p,questions[0],true,10,`2026-10-0${i}`).profile;assert.equal(earnedBadges(p)[7],true);assert.equal(earnedBadges(p)[3],true);
+ const bad=recordAttempt(p,questions[1],false,10,'2026-10-04').profile;assert.equal(earnedBadges(bad)[7],false);
+ p=recordAttempt(p,questions[0],false,60,'2026-10-20').profile;assert.equal(earnedBadges(p)[7],true);assert.equal(earnedBadges(p)[3],true);
+});
+test('storage rejects malformed attempts and old fixture progress',()=>{
+ const p=readProfile(JSON.stringify({name:2,attempts:[null,{id:'s1',xp:100},{id:questions[0].id,mode:'speed',correct:true,xp:'oops'}],days:['2026-10-08']}));assert.equal(p.attempts.length,0);assert.equal(p.name,'');assert.deepEqual(p.days,[]);assert.deepEqual(readProfile(null),freshProfile);
+});

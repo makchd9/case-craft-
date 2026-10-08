@@ -1,0 +1,284 @@
+{
+  "Speed_Search": [
+    {
+      "Legal Issue (prompt shown to player)": "Which case established that Parliament cannot amend the Constitution to destroy its 'basic structure'?",
+      "Correct Case Name": "Kesavananda Bharati v. State of Kerala",
+      "Citation": "(1973) 4 SCC 225",
+      "Court": "Supreme Court of India",
+      "Year": 1973,
+      "Domain": "Constitutional"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case recognized the Right to Privacy as a fundamental right under the Constitution?",
+      "Correct Case Name": "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+      "Citation": "(2017) 10 SCC 1",
+      "Court": "Supreme Court of India",
+      "Year": 2017,
+      "Domain": "Constitutional"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case laid down the 'rarest of rare' doctrine for imposing the death penalty?",
+      "Correct Case Name": "Bachan Singh v. State of Punjab",
+      "Citation": "(1980) 2 SCC 684",
+      "Court": "Supreme Court of India",
+      "Year": 1980,
+      "Domain": "Criminal"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case held that the procedure under Article 21 must be fair, just and reasonable, not arbitrary?",
+      "Correct Case Name": "Maneka Gandhi v. Union of India",
+      "Citation": "(1978) 1 SCC 248",
+      "Court": "Supreme Court of India",
+      "Year": 1978,
+      "Domain": "Constitutional"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case laid down guidelines on workplace sexual harassment before legislation existed?",
+      "Correct Case Name": "Vishaka v. State of Rajasthan",
+      "Citation": "AIR 1997 SC 3011",
+      "Court": "Supreme Court of India",
+      "Year": 1997,
+      "Domain": "Constitutional"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case introduced the doctrine of 'absolute liability' for hazardous industries in India?",
+      "Correct Case Name": "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+      "Citation": "AIR 1987 SC 1086",
+      "Court": "Supreme Court of India",
+      "Year": 1987,
+      "Domain": "Tort/Environmental"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case struck down Section 66A of the Information Technology Act as unconstitutional?",
+      "Correct Case Name": "Shreya Singhal v. Union of India",
+      "Citation": "(2015) 5 SCC 1",
+      "Court": "Supreme Court of India",
+      "Year": 2015,
+      "Domain": "Constitutional/IT Law"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case read down Section 377 of the IPC to decriminalize consensual same-sex relations?",
+      "Correct Case Name": "Navtej Singh Johar v. Union of India",
+      "Citation": "(2018) 10 SCC 1",
+      "Court": "Supreme Court of India",
+      "Year": 2018,
+      "Domain": "Constitutional/Criminal"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case upheld the Mandal Commission's OBC reservation but capped total reservation at 50%?",
+      "Correct Case Name": "Indra Sawhney v. Union of India",
+      "Citation": "AIR 1993 SC 477",
+      "Court": "Supreme Court of India",
+      "Year": 1992,
+      "Domain": "Constitutional"
+    },
+    {
+      "Legal Issue (prompt shown to player)": "Which case held that the right to livelihood is part of the right to life under Article 21?",
+      "Correct Case Name": "Olga Tellis v. Bombay Municipal Corporation",
+      "Citation": "AIR 1986 SC 180",
+      "Court": "Supreme Court of India",
+      "Year": 1985,
+      "Domain": "Constitutional"
+    }
+  ],
+  "Ratio_Quiz": [
+    {
+      "Case Name": "Kesavananda Bharati v. State of Kerala",
+      "Judgment Snippet (paraphrased, shown to player)": "Parliament has wide power to amend the Constitution under Article 368, but this power is not unlimited.",
+      "Ratio Decidendi (correct answer)": "Parliament cannot use its amending power under Article 368 to damage or destroy the 'basic structure' of the Constitution.",
+      "Obiter Dicta (distractor)": "Individual judges' differing lists of what counts as 'basic structure' (federalism, secularism, judicial review, etc.) — illustrative, not an exhaustive binding list.",
+      "Domain": "Constitutional"
+    },
+    {
+      "Case Name": "Maneka Gandhi v. Union of India",
+      "Judgment Snippet (paraphrased, shown to player)": "The petitioner's passport was impounded without being given a reason or a hearing.",
+      "Ratio Decidendi (correct answer)": "Any procedure that deprives a person of life or personal liberty under Article 21 must be fair, just, and reasonable — not arbitrary or oppressive.",
+      "Obiter Dicta (distractor)": "Broader discussion on how Articles 14, 19, and 21 together form one integrated scheme of fundamental rights.",
+      "Domain": "Constitutional"
+    },
+    {
+      "Case Name": "Bachan Singh v. State of Punjab",
+      "Judgment Snippet (paraphrased, shown to player)": "The constitutionality of the death penalty under Section 302 IPC was challenged as violating Articles 14, 19, and 21.",
+      "Ratio Decidendi (correct answer)": "The death penalty should be imposed only in the 'rarest of rare' cases, where the alternative option of life imprisonment is unquestionably foreclosed.",
+      "Obiter Dicta (distractor)": "The illustrative (non-exhaustive) list of aggravating and mitigating circumstances a court may consider.",
+      "Domain": "Criminal"
+    },
+    {
+      "Case Name": "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+      "Judgment Snippet (paraphrased, shown to player)": "A hazardous gas leak from a factory in Delhi caused injury to nearby residents.",
+      "Ratio Decidendi (correct answer)": "An enterprise engaged in a hazardous or inherently dangerous activity owes an absolute and non-delegable duty to the community, with no exceptions for 'Act of God' or third-party fault.",
+      "Obiter Dicta (distractor)": "Remarks on the need for a specialized environmental tribunal and stricter industrial regulation going forward.",
+      "Domain": "Tort/Environmental"
+    },
+    {
+      "Case Name": "Vishaka v. State of Rajasthan",
+      "Judgment Snippet (paraphrased, shown to player)": "In the absence of any domestic law on the subject, the Court was asked to address workplace sexual harassment.",
+      "Ratio Decidendi (correct answer)": "In the absence of domestic legislation, international conventions (like CEDAW) can be read into Articles 14, 19, and 21 to fill the gap, and the Vishaka Guidelines are binding until Parliament legislates.",
+      "Obiter Dicta (distractor)": "Observations on employer best practices and the need for a complaints committee structure.",
+      "Domain": "Constitutional/Labour"
+    },
+    {
+      "Case Name": "Shreya Singhal v. Union of India",
+      "Judgment Snippet (paraphrased, shown to player)": "Section 66A of the IT Act criminalized sending 'offensive' messages online, and was challenged as vague and overbroad.",
+      "Ratio Decidendi (correct answer)": "Section 66A is unconstitutional as it is vague, overbroad, and has a chilling effect on the fundamental right to freedom of speech and expression under Article 19(1)(a).",
+      "Obiter Dicta (distractor)": "Commentary distinguishing Section 66A from Sections 69A and 79 of the IT Act, which were upheld with safeguards.",
+      "Domain": "Constitutional/IT Law"
+    }
+  ],
+  "Fake_Case_Detector": [
+    {
+      "Case Name Shown": "Kesavananda Bharati v. State of Kerala",
+      "Citation Shown": "(1973) 4 SCC 225",
+      "Short Summary Shown to Player": "Held that Parliament's amending power under Article 368 cannot destroy the Constitution's basic structure.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited landmark case — the origin of the basic structure doctrine."
+    },
+    {
+      "Case Name Shown": "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+      "Citation Shown": "(2017) 10 SCC 1",
+      "Short Summary Shown to Player": "Held that the right to privacy is a fundamental right protected under Article 21.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case — a 9-judge bench decision from 2017."
+    },
+    {
+      "Case Name Shown": "Vishaka v. State of Rajasthan",
+      "Citation Shown": "AIR 1997 SC 3011",
+      "Short Summary Shown to Player": "Laid down guidelines on workplace sexual harassment in the absence of legislation.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case — the source of the 'Vishaka Guidelines'."
+    },
+    {
+      "Case Name Shown": "M.C. Mehta v. Union of India",
+      "Citation Shown": "AIR 1987 SC 1086",
+      "Short Summary Shown to Player": "Introduced the doctrine of absolute liability for hazardous industries, arising from the Oleum Gas Leak.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case, also known as the Oleum Gas Leak case."
+    },
+    {
+      "Case Name Shown": "Olga Tellis v. Bombay Municipal Corporation",
+      "Citation Shown": "AIR 1986 SC 180",
+      "Short Summary Shown to Player": "Held that the right to livelihood is part of the right to life under Article 21.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case concerning pavement dwellers in Mumbai."
+    },
+    {
+      "Case Name Shown": "Shreya Singhal v. Union of India",
+      "Citation Shown": "(2015) 5 SCC 1",
+      "Short Summary Shown to Player": "Struck down Section 66A of the IT Act as unconstitutional for being vague and overbroad.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case protecting online free speech."
+    },
+    {
+      "Case Name Shown": "Navtej Singh Johar v. Union of India",
+      "Citation Shown": "(2018) 10 SCC 1",
+      "Short Summary Shown to Player": "Read down Section 377 IPC to decriminalize consensual same-sex relations between adults.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case."
+    },
+    {
+      "Case Name Shown": "Indra Sawhney v. Union of India",
+      "Citation Shown": "AIR 1993 SC 477",
+      "Short Summary Shown to Player": "Upheld OBC reservations under the Mandal Commission report, capping total reservation at 50%.",
+      "Real or Fake": "REAL",
+      "Explanation (revealed after answer)": "This is a real, correctly cited case, also known as the Mandal case."
+    },
+    {
+      "Case Name Shown": "Ramesh Kumar v. Union of India",
+      "Citation Shown": "(2016) 9 SCC 234",
+      "Short Summary Shown to Player": "Allegedly held that access to free Wi-Fi is a fundamental right under Article 21.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "No such case or holding exists. This citation and case name are fabricated — a classic hallucination pattern (plausible name + plausible citation format + no real ruling)."
+    },
+    {
+      "Case Name Shown": "Sharma Industries v. State of Maharashtra",
+      "Citation Shown": "AIR 2009 SC 1123",
+      "Short Summary Shown to Player": "Allegedly the case that first introduced the doctrine of absolute liability in India.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Misattribution: the doctrine of absolute liability actually originates from M.C. Mehta v. Union of India (1987), not this invented case."
+    },
+    {
+      "Case Name Shown": "National Bank of India v. Verma",
+      "Citation Shown": "(2012) 3 SCC 567",
+      "Short Summary Shown to Player": "Allegedly the leading Indian case on lifting the corporate veil.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "This case name and citation are fabricated. No such leading Supreme Court case exists under this name."
+    },
+    {
+      "Case Name Shown": "Priya Enterprises v. State of Delhi",
+      "Citation Shown": "2014 SCC OnLine Del 4521",
+      "Short Summary Shown to Player": "Allegedly held that SMS messages are protected under a standalone 'digital privacy' right.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Fabricated case. No such Delhi High Court ruling exists under this name or citation."
+    },
+    {
+      "Case Name Shown": "K.L. Mehta v. Union of India",
+      "Citation Shown": "AIR 1991 SC 998",
+      "Short Summary Shown to Player": "Allegedly the case that established the basic structure doctrine.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Misattribution: the basic structure doctrine comes from Kesavananda Bharati v. State of Kerala (1973), not this invented case."
+    },
+    {
+      "Case Name Shown": "Suresh Textiles v. ESIC",
+      "Citation Shown": "(2018) 7 SCC 112",
+      "Short Summary Shown to Player": "Allegedly held that gig/platform workers are automatically entitled to full employee benefits under the ESI Act.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Fabricated holding. No Supreme Court ruling of this kind existed in Indian law as of 2018 — gig-worker classification remained (and largely remains) unsettled."
+    },
+    {
+      "Case Name Shown": "Anjali Verma v. State of U.P.",
+      "Citation Shown": "2020 SCC OnLine SC 445",
+      "Short Summary Shown to Player": "Allegedly recognized a standalone 'right to be forgotten' as part of Article 21.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Fabricated case. India has no clear Supreme Court ruling establishing this as of the date of this content set — only scattered High Court observations exist."
+    },
+    {
+      "Case Name Shown": "Bharat Steel Ltd. v. Commissioner of Income Tax",
+      "Citation Shown": "(2005) 4 SCC 890",
+      "Short Summary Shown to Player": "Allegedly held that all corporate CSR spending is automatically tax-deductible.",
+      "Real or Fake": "FAKE",
+      "Explanation (revealed after answer)": "Fabricated case and holding, invented to sound plausible but with no real basis in Indian tax law."
+    }
+  ],
+  "Badges": [
+    {
+      "Badge Name": "Citation Master",
+      "Criteria to Earn It": "Answer 20 Speed Search Challenge questions correctly.",
+      "Icon Suggestion": "Scales of justice icon, gold"
+    },
+    {
+      "Badge Name": "Ratio Detective",
+      "Criteria to Earn It": "Correctly identify the ratio decidendi in 15 Ratio Quiz questions.",
+      "Icon Suggestion": "Magnifying glass over a document"
+    },
+    {
+      "Badge Name": "Fake Case Buster",
+      "Criteria to Earn It": "Correctly spot 10 fabricated citations in Fake Case Detector.",
+      "Icon Suggestion": "Shield with a checkmark"
+    },
+    {
+      "Badge Name": "5-Day Streak",
+      "Criteria to Earn It": "Practice on CaseCraft 5 days in a row.",
+      "Icon Suggestion": "Small flame icon"
+    },
+    {
+      "Badge Name": "10-Day Streak",
+      "Criteria to Earn It": "Practice on CaseCraft 10 days in a row.",
+      "Icon Suggestion": "Larger/brighter flame icon"
+    },
+    {
+      "Badge Name": "Constitutional Law Expert",
+      "Criteria to Earn It": "Correctly answer 10 Constitutional-law-tagged questions across all modes.",
+      "Icon Suggestion": "Open book with a gavel"
+    },
+    {
+      "Badge Name": "Speed Demon",
+      "Criteria to Earn It": "Complete a Speed Search Challenge correctly in under 30 seconds.",
+      "Icon Suggestion": "Lightning bolt"
+    },
+    {
+      "Badge Name": "Perfect Week",
+      "Criteria to Earn It": "Score 100% accuracy across all challenges attempted in a 7-day period.",
+      "Icon Suggestion": "Star/trophy icon"
+    }
+  ]
+}
