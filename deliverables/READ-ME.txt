@@ -1,14 +1,5 @@
-CASECRAFT — CLIENT REVIEW
+CaseCraft client preview — 14 October 2026
 
-Open CaseCraft-Client-Preview.html in a current desktop browser.
-Keep the HTML file after downloading it; some email viewers do not run interactive attachments, so open the downloaded file rather than the email preview.
+Open CaseCraft-Client-Preview.html in a browser. The local-file launch was not verified in the automated browser; the equivalent local web preview was tested.
 
-Includes 10 Speed Search questions, 6 Ratio Decidendi questions, 16 Fake Case Detector questions, and 8 badges.
-
-This is an unpublished review copy. Nothing is submitted to a server. Profiles, XP and progress stay in your browser. Browser settings may prevent local-file storage; a warning will appear if saving is unavailable. Judgment-reference links need internet.
-
-The class leaderboard shows only your local profile. Shared accounts, live rankings and public portfolio links are not connected. You can export a portfolio snapshot from the page.
-
-Content uses the supplied starter workbook. Some ratio distractors were revised to avoid mislabelling binding legal principles as obiter. The original workbook is unchanged. Subject-matter approval remains necessary before public educational use, and the detector bank is still the 16-entry starter set.
-
-Verification: all 32 challenges were played through in the local web preview, and scoring/content checks and application builds passed. The standalone file was checked for valid bundled JavaScript and self-contained assets. Its direct local-file launch could not be automated because the browser tool blocks file URLs; please open it once before forwarding.
+Use Explore to choose a game, badges, portfolio or help. All 32 starter challenges are included. Progress is stored only in this browser. Password login is a coming-soon screen: real accounts and cross-device sync are not connected. No class or shared leaderboard is included.
