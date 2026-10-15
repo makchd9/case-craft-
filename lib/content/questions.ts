@@ -60,6 +60,6 @@ const sourceOverrides:Record<string,string>={
  'Shreya Singhal':'https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/documents/aor_notice_circular/35.pdf'
 };
 for(const q of questions){const title=q.caseName??(q.mode==='speed'?q.options.find(o=>o.id===q.answer)?.text:q.prompt)??'';for(const [name,url] of Object.entries(sourceOverrides)){if(q.source&&title.startsWith(name)){q.source=url;q.sourceLabel='Read the judgment';}}}
-export const badgeDefinitions=workbook.Badges.map((r,i)=>({id:i,name:r['Badge Name'],text:r['Criteria to Earn It']}));
+export const badgeDefinitions=workbook.Badges.map((r,i)=>({id:i,name:r['Badge Name'],text:r['Badge Name']==='Ratio Detective'?'Correctly answer 5 different Ratio Decidendi questions.':r['Criteria to Earn It']}));
 export function shuffled<T>(items:readonly T[],random= Math.random):T[]{const copy=[...items];for(let i=copy.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy}
 export function roundQuestions(mode:Mode,completed:string[],random=Math.random):Question[]{const pool=questions.filter(q=>q.mode===mode);return [...shuffled(pool.filter(q=>!completed.includes(q.id)),random),...shuffled(pool.filter(q=>completed.includes(q.id)),random)].map(q=>({...q,options:shuffled(q.options,random)}))}

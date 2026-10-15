@@ -27,6 +27,13 @@ Primary judgment references used for the targeted review:
 
 ## Progress rules
 
-XP and portfolio accuracy retain first attempts. Correct replay answers count toward practice badges, allowing 20/15/10 thresholds to be reached with the starter collection. Fake Case Buster counts correct fabricated verdicts only. Constitutional tags include combined domains. Perfect Week requires at least one completed answer on each of seven consecutive days and no wrong answers during that window. Streak badges remain earned after a streak later breaks.
+XP and portfolio accuracy retain first attempts. Correct replay answers count toward practice badges, allowing the 20/10 repeat-practice thresholds to be reached with the starter collection. Ratio Detective requires 5 distinct correctly answered Ratio questions out of 6; repeat answers to the same question do not inflate this count. Fake Case Buster counts correct fabricated verdicts only. Constitutional tags include combined domains. Perfect Week requires at least one completed answer on each of seven consecutive days and no wrong answers during that window. Streak badges remain earned after a streak later breaks.
 
 The new collection uses separate browser storage, leaving old fictional-demo progress untouched. Scores are local and editable by the browser owner; this is not an authenticated production system.
+
+
+## Feedback clarification — 15 October 2026
+
+Speed Search now snapshots the selected and expected answers on submission and displays explicit correct, incorrect, or timeout text. Regression coverage includes Kesavananda selected for the M.C. Mehta question, wrong answers receiving zero XP/no Speed Demon, shuffled options, and timeouts. The original reported false-positive was not reproduced; the existing equality check already used stable option IDs.
+
+Public portfolio URLs and real password registration/login remain future features. The current export is an HTML file only. The earlier Institutions section was a concept and was removed during the minimal-homepage redesign; no dedicated institutions page or connected faculty dashboard is currently built.

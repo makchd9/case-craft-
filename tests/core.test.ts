@@ -32,3 +32,32 @@ test('Perfect Week requires activity and correctness on all seven days; awards p
 test('storage rejects malformed attempts and old fixture progress',()=>{
  const p=readProfile(JSON.stringify({name:2,attempts:[null,{id:'s1',xp:100},{id:questions[0].id,mode:'speed',correct:true,xp:'oops'}],days:['2026-10-08']}));assert.equal(p.attempts.length,0);assert.equal(p.name,'');assert.deepEqual(p.days,[]);assert.deepEqual(readProfile(null),freshProfile);
 });
+
+
+test('Speed Search grades the selected case ID, including the reported Mehta/Kesavananda mismatch',async()=>{
+ const {evaluateAnswer}=await import('../lib/answer-result');
+ const q=questions.find(q=>q.mode==='speed'&&q.options.find(o=>o.id===q.answer)?.text.startsWith('M.C. Mehta'))!;
+ const wrong=q.options.find(o=>o.text.startsWith('Kesavananda'))!;
+ assert.ok(q&&wrong);
+ const filtered={...q,options:shuffled(q.options,()=>.3)};
+ const result=evaluateAnswer(filtered,wrong.id,4,60);
+ assert.equal(result.correct,false);assert.equal(result.label,'Incorrect answer.');assert.equal(result.selectedAnswer,wrong.text);
+ const saved=recordAttempt(freshProfile,q,result.correct,4);
+ assert.equal(saved.xp,0);assert.equal(earnedBadges(saved.profile)[6],false);
+ const right=evaluateAnswer(filtered,q.answer,4,60);assert.equal(right.correct,true);assert.equal(right.label,'Correct answer.');
+ assert.equal(earnedBadges(recordAttempt(saved.profile,q,right.correct,4).profile)[6],true);
+ assert.equal(evaluateAnswer(q,q.answer,60,60).correct,false);
+ assert.equal(evaluateAnswer(q,q.answer,2,60,true).timeout,true);
+ assert.equal(evaluateAnswer(q,'nonexistent',2,60).correct,false);
+ for(const question of questions){const wrong=question.options.find(o=>o.id!==question.answer)!;assert.equal(evaluateAnswer(question,wrong.id,1,60).correct,false);assert.equal(evaluateAnswer(question,question.answer,1,60).correct,true)}
+});
+test('Ratio Detective unlocks at five distinct correct questions, not repeated or wrong answers',()=>{
+ const ratio=questions.filter(q=>q.mode==='ratio');let p={...freshProfile};
+ for(let i=0;i<6;i++)p=recordAttempt(p,ratio[0],true,5).profile;
+ assert.equal(earnedBadges(p)[1],false);
+ for(const q of ratio.slice(1,4))p=recordAttempt(p,q,true,5).profile;
+ assert.equal(earnedBadges(p)[1],false);
+ p=recordAttempt(p,ratio[4],false,5).profile;assert.equal(earnedBadges(p)[1],false);
+ p=recordAttempt(p,ratio[4],true,5).profile;assert.equal(earnedBadges(p)[1],true);
+ assert.match(badgeDefinitions[1].text,/5 different/);
+});
