@@ -37,3 +37,7 @@ The new collection uses separate browser storage, leaving old fictional-demo pro
 Speed Search now snapshots the selected and expected answers on submission and displays explicit correct, incorrect, or timeout text. Regression coverage includes Kesavananda selected for the M.C. Mehta question, wrong answers receiving zero XP/no Speed Demon, shuffled options, and timeouts. The original reported false-positive was not reproduced; the existing equality check already used stable option IDs.
 
 Public portfolio URLs and real password registration/login remain future features. The current export is an HTML file only. The earlier Institutions section was a concept and was removed during the minimal-homepage redesign; no dedicated institutions page or connected faculty dashboard is currently built.
+
+
+## Institutions page delivered
+A dedicated #institutions view is now linked from Explore, with an institutional pitch, three learning-mode descriptions, a working student-challenge CTA, and an explicitly planned faculty dashboard concept. Public profiles, real accounts, and faculty reporting remain pending.
