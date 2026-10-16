@@ -104,3 +104,33 @@ h1,h2,h3,.brand,.button,.explore-button{font-family:inherit}
 @media(max-width:600px){.welcome h1{letter-spacing:-1px}}
 
 .institution-intro{display:grid;grid-template-columns:1.35fr 1fr;gap:60px;align-items:center;margin:20px 0 60px}.institution-intro h1{font-size:clamp(34px,4.2vw,56px);font-weight:600;letter-spacing:-1.5px;line-height:1.15}.institution-intro h1 em{color:var(--primary)}.institution-intro .intro{color:var(--muted-foreground);max-width:560px}.institution-note{background:#edf8df;border:1px solid #bdd69e;border-radius:22px;padding:32px;color:#305b20}.institution-note h2{font-size:29px;margin-top:20px}.institution-note p{font-size:15px;line-height:1.8}.institution-note .pill{background:#fff;color:#305b20;border-color:#bdd69e;margin-top:12px}.institution-skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-block:1px solid var(--border);padding:34px 0}.institution-skills article>svg{color:#7444c8}.institution-skills h3{font-size:19px;font-weight:600;margin:18px 0 10px}.institution-skills p,.institution-future p,.institution-status p{font-size:15px;line-height:1.8;color:var(--muted-foreground)}.institution-future{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin:60px 0}.faculty-concept{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:25px;box-shadow:0 5px 0 #ece5db}.faculty-concept-title{display:flex;align-items:center;gap:10px;color:#5934a1}.faculty-concept-title>.pill{margin-left:auto}.concept-row{border-bottom:1px solid var(--border);padding:20px 0}.concept-row strong{font-size:14px}.concept-row p{font-size:13px;margin:5px 0 0}.faculty-concept .concept-disclaimer{font-size:11px;display:flex;gap:8px;align-items:center;margin:18px 0 0}.institution-status{border-top:1px solid var(--border);padding-top:25px}.institution-status p{max-width:830px}@media(max-width:760px){.institution-intro,.institution-future{grid-template-columns:1fr;gap:28px;margin-bottom:35px}.institution-skills{grid-template-columns:1fr;gap:20px}.institution-intro h1{letter-spacing:-.8px}.institution-note{padding:24px}.institution-future{margin-top:35px}.faculty-concept{padding:20px}.faculty-concept-title{gap:6px;font-size:14px}.faculty-concept-title .pill{font-size:10px}}
+
+.feedback-section {max-width:800px;margin:auto;text-align:center}.feedback-section blockquote {font-size:clamp(1.25rem,3vw,1.8rem);line-height:1.6;margin:24px 0}.feedback-section blockquote footer {font-size:1rem}.feedback-enter {animation:feedback-in .28s ease-out}@keyframes feedback-in {from {opacity:0;transform:translateY(8px)}to {opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.feedback-enter{animation:none}}
+
+/* Current-layout motion: composited transforms, short staggered entrances, no layout shifts. */
+@keyframes cc-arrive{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
+@keyframes cc-icon-arrive{from{opacity:0;scale:.8}to{opacity:1;scale:1}}
+@keyframes cc-spark-drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(12deg)}}
+@keyframes cc-dot-drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-5px,7px)}}
+@keyframes cc-hint-pulse{0%,100%{box-shadow:0 0 0 0 #5c9e2b22}60%{box-shadow:0 0 0 7px #5c9e2b00}}
+html[data-casecraft-motion=on] .welcome .eyebrow{animation:cc-arrive .65s cubic-bezier(.2,.8,.2,1) .08s both}
+html[data-casecraft-motion=on] .welcome h1{animation:cc-arrive .8s cubic-bezier(.2,.8,.2,1) .16s both}
+html[data-casecraft-motion=on] .welcome-copy{animation:cc-arrive .75s cubic-bezier(.2,.8,.2,1) .28s both}
+html[data-casecraft-motion=on] .welcome-hint{animation:cc-arrive .65s cubic-bezier(.2,.8,.2,1) .4s both}
+html[data-casecraft-motion=on] .welcome-mark{animation:cc-icon-arrive .7s cubic-bezier(.16,1,.3,1) both,welcome-bob 4.5s ease-in-out .7s infinite}
+html[data-casecraft-motion=on] .mark-spark{animation:cc-spark-drift 4s ease-in-out infinite}
+html[data-casecraft-motion=on] .mark-dot{animation:cc-dot-drift 5s ease-in-out -1s infinite}
+html[data-casecraft-motion=on] .welcome-hint>span{animation:cc-hint-pulse 2.8s ease-in-out infinite}
+html[data-casecraft-motion=on] .motion-revealed{animation:cc-arrive .65s cubic-bezier(.2,.8,.2,1) var(--reveal-delay,0ms) both}
+.button,.explore-button,.brand,.panel,.profile-summary,.accuracy-panel,.badge,.level-choice,.steps>div,.institution-note{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,border-color .2s,background-color .2s}
+.button:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #ac3516}
+.explore-dropdown [data-slot=dropdown-menu-item]{transition:background-color .16s,transform .2s}
+.explore-dropdown [data-slot=dropdown-menu-item][data-highlighted]{transform:translateX(3px)}
+.account-dialog [data-slot=dialog-title]:focus{outline:none}
+html[data-casecraft-motion=on] .account-dialog .profile-form{animation:cc-arrive .35s ease-out both}
+html[data-casecraft-motion=on] .cc-dialog[data-state=open]{animation-duration:280ms;animation-timing-function:cubic-bezier(.16,1,.3,1)}
+[data-slot=progress-indicator]{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+@media(hover:hover) and (pointer:fine){html[data-casecraft-motion=on] .panel:hover,html[data-casecraft-motion=on] .profile-summary:hover,html[data-casecraft-motion=on] .accuracy-panel:hover,html[data-casecraft-motion=on] .institution-note:hover{transform:translateY(-4px);box-shadow:0 12px 24px #38234012}html[data-casecraft-motion=on] .badge:hover{transform:translateY(-4px)}html[data-casecraft-motion=on] .brand:hover{transform:translateY(-2px)}.level-choice:hover{border-color:#9675cc}}
+.motion-scene[data-challenge-active=true] .welcome *,.motion-scene[data-challenge-active=true] .welcome *::before{animation-play-state:paused!important}
+html[data-casecraft-motion=off] *,html[data-casecraft-motion=off] *::before,html[data-casecraft-motion=off] *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){html * ,html *::before,html *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

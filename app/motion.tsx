@@ -7,7 +7,14 @@ export function MotionScene({children,challengeActive}:{children:ReactNode;chall
  const root=useRef<HTMLDivElement>(null);
  useEffect(()=>{const media=matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReduced(media.matches);update();media.addEventListener('change',update);return()=>media.removeEventListener('change',update)},[]);
  const disabled=reduced||paused;
- useEffect(()=>{const scope=root.current;if(!scope||disabled||!('IntersectionObserver' in window))return;const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('motion-revealed');observer.unobserve(entry.target)}}},{threshold:.08});scope.querySelectorAll('.section-heading,.mode-card,.steps>div,.progress-layout,.portfolio-grid,.institution-section,.join-section').forEach(el=>observer.observe(el));return()=>observer.disconnect()},[disabled]);
+ useEffect(()=>{const scope=root.current;if(!scope||disabled||!('IntersectionObserver' in window))return;
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('motion-revealed');observer.unobserve(entry.target)}}},{threshold:.08});
+ const seen=new WeakSet<Element>();
+ const scan=()=>scope.querySelectorAll('.section-heading,.steps>div,.panel,.profile-summary,.accuracy-panel,.badge,.institution-intro,.institution-section,.institution-note,.institution-status,.institution-benefits>article').forEach((el,i)=>{if(seen.has(el))return;seen.add(el);(el as HTMLElement).style.setProperty('--reveal-delay',`${Math.min(i%4,3)*75}ms`);observer.observe(el)});
+ scan();const changes=new MutationObserver(scan);changes.observe(scope,{childList:true,subtree:true});return()=>{observer.disconnect();changes.disconnect()}
+ },[disabled]);
+ useEffect(()=>{document.documentElement.dataset.casecraftMotion=disabled?'off':'on';return()=>{delete document.documentElement.dataset.casecraftMotion}},[disabled]);
+
  return <MotionContext.Provider value={disabled}><div ref={root} className="motion-scene" data-motion-paused={disabled} data-challenge-active={challengeActive}>{children}<div className="motion-controls"><button type="button" onClick={()=>setPaused(p=>!p)} disabled={reduced} aria-pressed={disabled}>{disabled?<Play size={14}/>:<Pause size={14}/>} {reduced?'Reduced motion enabled':paused?'Resume motion':'Pause motion'}</button></div></div></MotionContext.Provider>
 }
 export function AnimatedNumber({value}:{value:number}){

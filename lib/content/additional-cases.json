@@ -1,0 +1,234 @@
+[
+  {
+    "id": "yakub-memon",
+    "name": "Yakub Abdul Razak Memon v. State of Maharashtra",
+    "citation": "(2013) 13 SCC 1",
+    "year": 2013,
+    "domain": "Criminal",
+    "prompt": "Which Supreme Court decision reviewed convictions in the 1993 Bombay bomb-blast prosecution under TADA?",
+    "source": "https://indiankanoon.org/doc/160740668/"
+  },
+  {
+    "id": "arun-gawali",
+    "name": "State of Maharashtra v. Arun Gulab Gawali",
+    "citation": "AIR 2010 SC 3762",
+    "year": 2010,
+    "domain": "Criminal",
+    "prompt": "Which decision examined the High Court’s quashing of criminal proceedings involving Arun Gulab Gawali?",
+    "source": "https://indiankanoon.org/doc/354079/"
+  },
+  {
+    "id": "kartar-singh",
+    "name": "Kartar Singh v. State of Punjab",
+    "citation": "(1994) 3 SCC 569",
+    "year": 1994,
+    "domain": "Constitutional/Criminal",
+    "prompt": "Which Constitution Bench decision considered the constitutional validity of TADA and safeguards surrounding its use?",
+    "source": "https://indiankanoon.org/doc/1813801/"
+  },
+  {
+    "id": "hitendra-thakur",
+    "name": "Hitendra Vishnu Thakur v. State of Maharashtra",
+    "citation": "(1994) 4 SCC 602",
+    "year": 1994,
+    "domain": "Criminal",
+    "prompt": "Which 1994 decision examined TADA’s scope and procedural safeguards concerning extension of detention during investigation?",
+    "source": "https://indiankanoon.org/doc/41993725/"
+  },
+  {
+    "id": "rc-cooper",
+    "name": "R.C. Cooper v. Union of India",
+    "citation": "(1970) 1 SCC 248",
+    "year": 1970,
+    "domain": "Constitutional/Banking",
+    "prompt": "Which landmark decision concerned bank nationalisation and the impact of State action on fundamental rights?",
+    "source": "https://indiankanoon.org/doc/513801/"
+  },
+  {
+    "id": "kt-plantation",
+    "name": "K.T. Plantation Pvt. Ltd. v. State of Karnataka",
+    "citation": "(2011) 9 SCC 1",
+    "year": 2011,
+    "domain": "Constitutional/Property",
+    "prompt": "Which 2011 Constitution Bench decision examined deprivation of property, public purpose and compensation under Article 300A?",
+    "source": "https://indiankanoon.org/doc/1524072/"
+  },
+  {
+    "id": "sahara",
+    "name": "Sahara India Real Estate Corporation Ltd. v. Securities and Exchange Board of India",
+    "citation": "(2013) 1 SCC 1",
+    "year": 2012,
+    "domain": "Corporate/Securities",
+    "prompt": "Which decision addressed SEBI’s jurisdiction over Sahara companies’ optionally fully convertible debentures offered to the public?",
+    "source": "https://sooperkanoon.com/case/928408/sahara-india-real-estate-corporation-limited-vs-securities-exchange"
+  },
+  {
+    "id": "tcs-cyrus",
+    "name": "Tata Consultancy Services Ltd. v. Cyrus Investments Pvt. Ltd.",
+    "citation": "(2021) 12 SCC 1",
+    "year": 2021,
+    "domain": "Corporate",
+    "prompt": "Which 2021 decision addressed allegations of oppression and mismanagement arising from Cyrus Mistry’s removal at Tata Sons?",
+    "source": "https://indiankanoon.org/doc/5416696/"
+  },
+  {
+    "id": "cadila",
+    "name": "Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd.",
+    "citation": "(2001) 5 SCC 73",
+    "year": 2001,
+    "domain": "Intellectual Property/Commercial",
+    "prompt": "Which decision stressed the need for particular care when assessing confusion between medicinal product names in a passing-off action?",
+    "source": "https://indiankanoon.org/doc/1114158/"
+  },
+  {
+    "id": "whirlpool",
+    "name": "N.R. Dongre v. Whirlpool Corporation",
+    "citation": "(1996) 5 SCC 714",
+    "year": 1996,
+    "domain": "Intellectual Property/Commercial",
+    "prompt": "Which decision upheld interim protection of the Whirlpool mark in a passing-off dispute involving transborder reputation?",
+    "source": "https://indiankanoon.org/doc/1732339/"
+  },
+  {
+    "id": "satyam",
+    "name": "Satyam Infoway Ltd. v. Sifynet Solutions Pvt. Ltd.",
+    "citation": "(2004) 6 SCC 145",
+    "year": 2004,
+    "domain": "Cyber/Intellectual Property",
+    "prompt": "Which decision recognised that domain names may have business-identifying functions protected through passing-off law?",
+    "source": "https://indiankanoon.org/doc/1630167/"
+  },
+  {
+    "id": "ravinder",
+    "name": "Ravinder Kaur Grewal v. Manjit Kaur",
+    "citation": "(2019) 8 SCC 729",
+    "year": 2019,
+    "domain": "Property/Civil",
+    "prompt": "Which 2019 decision held that a person who has perfected title by adverse possession may sue to protect that title?",
+    "source": "https://indiankanoon.org/doc/199096823/"
+  },
+  {
+    "id": "harshad",
+    "name": "Harshad Shantilal Mehta v. Custodian",
+    "citation": "(1998) 5 SCC 1",
+    "year": 1998,
+    "domain": "Securities/Banking",
+    "prompt": "Which decision interpreted the distribution of attached assets under Section 11 of the Special Court (Trial of Offences Relating to Transactions in Securities) Act?",
+    "source": "https://indiankanoon.org/doc/58677/"
+  },
+  {
+    "id": "reliance",
+    "name": "Reliance Communications Ltd. v. State Bank of India & Ors.",
+    "citation": "AIR 2019 SC 1196; (2019) 3 SCALE 428",
+    "year": 2019,
+    "domain": "Corporate/Contempt",
+    "prompt": "Which February 2019 decision concerned contempt proceedings arising from undertakings to pay Ericsson in the Reliance Communications dispute?",
+    "source": "https://indiankanoon.org/doc/180851423/"
+  },
+  {
+    "id": "nalsa",
+    "name": "National Legal Services Authority v. Union of India",
+    "citation": "(2014) 5 SCC 438",
+    "year": 2014,
+    "domain": "Constitutional/Human Rights",
+    "prompt": "Which decision affirmed transgender persons’ rights to gender identity, equality and dignity?",
+    "source": "https://indiankanoon.org/doc/7003259/"
+  },
+  {
+    "id": "nilabati",
+    "name": "Nilabati Behera v. State of Orissa",
+    "citation": "(1993) 2 SCC 746",
+    "year": 1993,
+    "domain": "Constitutional/Tort/Human Rights",
+    "prompt": "Which decision awarded public-law compensation for a custodial death and distinguished that remedy from a private-law damages action?",
+    "source": "https://indiankanoon.org/doc/1628260/"
+  },
+  {
+    "id": "vellore",
+    "name": "Vellore Citizens Welfare Forum v. Union of India",
+    "citation": "(1996) 5 SCC 647",
+    "year": 1996,
+    "domain": "Environmental",
+    "prompt": "Which decision treated the precautionary principle and polluter-pays principle as essential features of sustainable development in Indian environmental law?",
+    "source": "https://indiankanoon.org/doc/1934103/"
+  },
+  {
+    "id": "sarla",
+    "name": "Sarla Mudgal, President, Kalyani v. Union of India",
+    "citation": "(1995) 3 SCC 635; AIR 1995 SC 1531",
+    "year": 1995,
+    "domain": "Family/Constitutional",
+    "prompt": "Which decision addressed a Hindu husband’s second marriage after conversion to Islam without dissolution of his first marriage?",
+    "source": "https://indiankanoon.org/doc/733037/",
+    "explanation": "Conversion to Islam did not dissolve the subsisting Hindu marriage. A second marriage while the first remained undissolved could attract the consequences of bigamy under the law considered in this decision."
+  },
+  {
+    "id": "lalita",
+    "name": "Lalita Kumari v. Government of Uttar Pradesh",
+    "citation": "(2014) 2 SCC 1",
+    "year": 2013,
+    "domain": "Criminal",
+    "prompt": "Which Constitution Bench decision held that registration of an FIR is mandatory when information discloses a cognizable offence, while discussing limited preliminary-inquiry situations?",
+    "source": "https://indiankanoon.org/doc/10239019/"
+  },
+  {
+    "id": "joseph",
+    "name": "Joseph Shine v. Union of India",
+    "citation": "(2019) 3 SCC 39",
+    "year": 2018,
+    "domain": "Criminal/Constitutional",
+    "prompt": "Which 2018 Constitution Bench judgment struck down the adultery offence in Section 497 of the Indian Penal Code?",
+    "source": "https://indiankanoon.org/doc/42184625/"
+  },
+  {
+    "id": "common-cause",
+    "name": "Common Cause (A Regd. Society) v. Union of India",
+    "citation": "(2018) 5 SCC 1",
+    "year": 2018,
+    "domain": "Constitutional/Medical",
+    "prompt": "Which 2018 decision recognised advance medical directives and passive euthanasia subject to safeguards?",
+    "source": "https://indiankanoon.org/doc/184449972/"
+  },
+  {
+    "id": "sabarimala",
+    "name": "Indian Young Lawyers Association v. State of Kerala",
+    "citation": "(2019) 11 SCC 1",
+    "year": 2018,
+    "domain": "Constitutional/Religious Freedom",
+    "prompt": "Which September 2018 decision addressed restrictions on women’s entry into the Sabarimala temple?",
+    "source": "https://indiankanoon.org/doc/163639357/"
+  },
+  {
+    "id": "carlill",
+    "name": "Carlill v. Carbolic Smoke Ball Co.",
+    "citation": "[1893] 1 QB 256",
+    "year": 1892,
+    "court": "Court of Appeal (England and Wales)",
+    "domain": "Contract",
+    "prompt": "A company promises a reward to anyone who uses its product as instructed but still falls ill. Which English precedent treats a sufficiently definite advertisement as a unilateral offer accepted by performance?",
+    "source": "https://www.bailii.org/ew/cases/EWCA/1892/1.html",
+    "explanation": "The advertisement was a unilateral offer, accepted by performing its conditions. The stated bank deposit supported an intention to be bound. Judgment was delivered in 1892 and reported in 1893. This is an English precedent."
+  },
+  {
+    "id": "donoghue",
+    "name": "Donoghue v. Stevenson",
+    "citation": "[1932] AC 562",
+    "year": 1932,
+    "court": "House of Lords (Scottish appeal)",
+    "domain": "Tort",
+    "prompt": "A consumer alleges illness after drinking a contaminated product bought by a friend. Which precedent recognised a potential duty of care owed by the manufacturer despite no contract with the consumer?",
+    "source": "https://www.bailii.org/uk/cases/UKHL/1932/100.html",
+    "explanation": "The House of Lords allowed the negligence claim to proceed. A manufacturer could owe the ultimate consumer a duty of care despite no direct contract. The alleged snail and injury were not findings of fact at this stage. This is a Scottish appeal and a foundational negligence precedent."
+  },
+  {
+    "id": "mohori",
+    "name": "Mohori Bibee v. Dharmodas Ghose",
+    "citation": "(1903) 30 IA 114",
+    "year": 1903,
+    "court": "Judicial Committee of the Privy Council (Indian appeal)",
+    "domain": "Contract",
+    "prompt": "A minor mortgages property to a moneylender whose agent knows of the minority. Which precedent holds the agreement void from the beginning for lack of contractual capacity?",
+    "source": "https://www.manupatracademy.com/assets/pdf/subjectwise-case-guide/MANU-PR-0049-1903.pdf",
+    "explanation": "The minor lacked contractual capacity under the Indian Contract Act. The mortgage agreement was void ab initio, rather than a valid agreement merely awaiting repudiation. This was an Indian appeal decided by the Privy Council."
+  }
+]

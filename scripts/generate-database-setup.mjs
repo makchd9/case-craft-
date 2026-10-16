@@ -1,0 +1,10 @@
+import {build} from 'esbuild';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+await build({entryPoints:['lib/content/questions.ts'],bundle:true,platform:'node',format:'esm',outfile:'.test-output/questions.mjs'});
+const {questions}=await import('../.test-output/questions.mjs?'+Date.now());
+const sqlString=s=>"'"+s.replaceAll("'","''")+"'";
+const seed=questions.map(q=>`(${[q.id,q.mode,q.domain,q.answer,JSON.stringify(q.options)].map(sqlString).join(',')})`).join(',\n');
+const sql=readFileSync('supabase/migrations/202610160001_casecraft.sql','utf8');
+mkdirSync('deliverables',{recursive:true});
+writeFileSync('deliverables/CaseCraft-Supabase-Setup.sql',sql+'\nbegin;\ninsert into casecraft_private.questions(id,mode,domain,answer,options) values\n'+seed+'\non conflict(id) do update set mode=excluded.mode,domain=excluded.domain,answer=excluded.answer,options=excluded.options;\ncommit;\n');
+console.log(`Prepared schema and ${questions.length} questions.`);

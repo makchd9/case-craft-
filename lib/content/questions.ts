@@ -1,3 +1,4 @@
+import additions from './additional-cases.json';
 import workbook from './starter-set.json';
 export type Mode = 'speed' | 'ratio' | 'fake';
 export type Question = {
@@ -6,7 +7,8 @@ export type Question = {
  answer: string; explanation: string; source?: string; sourceLabel?: string;
 };
 const researchSource='https://www.sci.gov.in/aor-examination/';
-const catalogue=workbook.Speed_Search.map((r,i)=>({id:`case-${i+1}`,text:r['Correct Case Name'],detail:`${r.Citation} · ${r.Court} · Decided ${r.Year} · ${r.Domain}`}));
+const starterCatalogue=workbook.Speed_Search.map((r,i)=>({id:`case-${i+1}`,text:r['Correct Case Name'],detail:`${r.Citation} · ${r.Court} · Decided ${r.Year} · ${r.Domain}`}));
+const catalogue=[...starterCatalogue,...additions.map(c=>({id:'case-'+c.id,text:c.name,detail:`${c.citation} · ${'court' in c?c.court:'Supreme Court of India'} · Decided ${c.year} · ${c.domain}`}))];
 const ratioPrompts=[
  'Which principle limits Parliament’s power under Article 368?',
  'Which standard must a procedure depriving a person of liberty satisfy under Article 21?',
@@ -34,6 +36,7 @@ const ratioNotes=[
  'Section 66A was struck down. The separate conclusions on Sections 69A and 79 were also holdings; they should not be labelled mere commentary.'
 ];
 export const questions: Question[]=[
+ ...additions.map((c):Question=>({id:`additional-speed-${c.id}`,mode:'speed',domain:c.domain,prompt:c.prompt,options:catalogue,answer:`case-${c.id}`,explanation:`The matching decision is ${c.name}, ${c.citation}, decided in ${c.year}. ${'explanation' in c?c.explanation:''} This exercise identifies the historical decision; later developments and current procedures require separate research.`,source:c.source,sourceLabel:'Read the judgment'})),
  ...workbook.Speed_Search.map((r,i):Question=>({id:`starter-speed-${i+1}`,mode:'speed',domain:r.Domain,prompt:r['Legal Issue (prompt shown to player)'].replace('but capped total reservation at 50%','and applied a general 50% ceiling to reservations'),options:catalogue,answer:`case-${i+1}`,explanation:`The matching precedent is ${r['Correct Case Name']}, ${r.Citation}, decided by the ${r.Court} in ${r.Year}. ${i===8?'The 50% rule is a general rule discussed in that decision, with exceptional situations; this is a historical case-identification exercise.':''}`,source:researchSource,sourceLabel:'Supreme Court leading-case resources'})),
  ...workbook.Ratio_Quiz.map((r,i):Question=>({id:`starter-ratio-${i+1}`,mode:'ratio',domain:r.Domain,caseName:r['Case Name'],prompt:ratioPrompts[i],snippet:r['Judgment Snippet (paraphrased, shown to player)'],options:[{id:'principle',text:r['Ratio Decidendi (correct answer)']},{id:'alternative',text:distractors[i]}],answer:'principle',explanation:ratioNotes[i],source:researchSource,sourceLabel:'Supreme Court leading-case resources'})),
  ...workbook.Fake_Case_Detector.map((r,i):Question=>{
