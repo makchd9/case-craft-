@@ -11,7 +11,7 @@
 ## Required project settings / live validation
 1. SQL Editor: run deliverables/CaseCraft-Supabase-Setup.sql (schema is rerunnable). For an already installed schema, run CaseCraft-Questions-Update.sql to add the expanded question bank.
 2. Authentication > URL Configuration: Site URL https://case-craft-m6lg.vercel.app; allow https://case-craft-m6lg.vercel.app/ and http://localhost:5173/ as redirect URLs. Add any alternate production domain explicitly.
-3. Keep email confirmation enabled. Set minimum password length 12 in Supabase too, since UI checks can be bypassed. Enable leaked-password protection if the project plan supports it.
+3. Keep email confirmation enabled. Set minimum password length 8 in Supabase too, since UI checks can be bypassed. Enable leaked-password protection if the project plan supports it.
 4. Configure your own SMTP sender before client rollout. Supabase's built-in mail service has delivery/recipient/rate restrictions. Verify a signup confirmation and password reset using an email address you control. Never share passwords in chat.
 5. Test sign-in on two devices, correct/incorrect/timed-out answers, sign-out, and public-link revocation against the live service.
 6. Review Supabase's Security Advisor, backups/retention and usage limits. No application can be certified risk-free from a code review.
